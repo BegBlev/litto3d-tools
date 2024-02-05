@@ -56,5 +56,5 @@ Convertion from `.asc` to `.png` files is made in 5 steps:
 ## asc2png usage
 In order to convert a `.asc` file to a `.png` file, just type:
 ```
-asc2png inputfile.asc outputfile.png
+python3 asc2png.py inputfile.asc outputfile.png
 ```
