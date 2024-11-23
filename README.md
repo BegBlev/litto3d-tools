@@ -7,6 +7,12 @@ litto3d-tools provides a Python script to convert those bathymetric data files t
 
 ![Litto3D chart](images/litto3d-tiny.png)
 
+## Download data from SHOM web site
+SHOM web site provides data as a set of `.7z` files.
+The name of those files have the following pattern `XXXX_YYYY.7z`, where `XXXX` is the longitude and `YYYY` the latitude in Lambert93 coordinates.
+
+Download all the area data files you are interested in and place them in a folder.
+
 ## ASC file format
 `.asc` are ASCII files containning a few metadata and the array of elevation.
 
