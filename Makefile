@@ -1,4 +1,4 @@
-#ZIP_PATH=~/Downloads
+ZIP_PATH=~/Downloads
 ZIP_FILES=$(wildcard ${ZIP_PATH}/*.7z)
 
 ASC_PATH=/var/tmp/litto3d/asc
