@@ -13,6 +13,19 @@ The name of those files have the following pattern `XXXX_YYYY.7z`, where `XXXX` 
 
 Download all the area data files you are interested in and place them in a folder.
 
+## Unzip data files
+Once `.7z` have been downloaded, those files have to be unzipped to a temporary directory in oreder to process them later.
+Those files can be unzipped using `make`.
+
+In `Makefile` a few variables can be configured:
+| Variable | Description |
+|---|---|
+|ZIP_PATH|Location of `.7z` data files. Default value is `~/Downloads` as this the location where those files are downloaded when using Firefox|
+
+```
+make
+```
+
 ## ASC file format
 `.asc` are ASCII files containning a few metadata and the array of elevation.
 
