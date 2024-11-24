@@ -7,12 +7,13 @@ import matplotlib.image
 from asc import ASCData
 
 def get_hillshading(elevation, ve=10, vmin=None, vmax=None):
-    # Shade from the northwest, with the sun 45 degrees from horizontal
+    # Shade from the south, with the sun 45 degrees from horizontal
     ls = LightSource(azdeg=180, altdeg=45)
     cmap = plt.cm.gist_earth
 
     print(vmin)
     print(vmax)
+
     shade = ls.shade(elevation, cmap=cmap, blend_mode='overlay',
                      vmin=vmin, vmax=vmax, vert_exag=ve)
 
