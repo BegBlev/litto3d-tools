@@ -26,6 +26,20 @@ In `Makefile` a few variables can be configured:
 make
 ```
 
+## Convert asc files to png
+To convert `.asc` into `.png` files, you can use the make target `png`.
+
+In `Makefile` a few variables can be configured for this phase:
+| Variable | Description |
+|---|---|
+|PNG_DIR|Location of `.png` files. Default value is `/var/tmp/litto3d/png/`|
+|MIN_ELEVATION|This is the minimal elevation (altitude in meters) of the maps. This parameter is needed for altitude scale colors to be identical from `.png` file to an other|
+|MAX_ELEVATION|This is the maximal elevation (altitude in meters) of the maps. This parameter is needed for altitude scale colors to be identical from `.png` file to an other|
+
+```
+make png
+```
+
 ## ASC file format
 `.asc` are ASCII files containning a few metadata and the array of elevation.
 
