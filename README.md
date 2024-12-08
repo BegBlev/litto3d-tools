@@ -26,6 +26,14 @@ In `Makefile` a few variables can be configured:
 make
 ```
 
+## Move asc files
+Once zip files are unzipped, `.asc` files are spread into many directories organized by areas.
+We have to group all `.asc` files into a common directory.
+
+```
+make move-asc
+```
+
 ## Convert asc files to png
 To convert `.asc` into `.png` files, you can use the make target `png`.
 
