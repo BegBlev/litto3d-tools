@@ -1,0 +1,9 @@
+KAPDIR := /var/tmp/litto3d/kap
+
+KAP_LIST_FILE = /var/tmp/litto3d/kap-list.txt
+
+.PHONY: kap-list
+kap-list: $(KAP_LIST_FILE)
+
+$(KAP_LIST_FILE):
+	./litto3d-kap-list.sh > $@
