@@ -66,6 +66,12 @@ We have to:
 make kap-png-files
 ```
 
+## Generate `.kap` files
+
+```
+make kap
+```
+
 ## ASC file format
 `.asc` are ASCII files containning a few metadata and the array of elevation.
 

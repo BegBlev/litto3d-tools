@@ -10,6 +10,21 @@ kap-list: $(KAP_LIST_FILE)
 $(KAP_LIST_FILE):
 	./litto3d-kap-list.sh > $@
 
+.PHONY: kap
+kap: kap-dir kap-files
+
+.PHONY: kap-dir
+kap-dir: ${KAPDIR}/
+
+${KAPDIR}:
+	mkdir -p ${KAPDIR}
+
+.PHONY: kap-files
+kap-files: ${KAP_FILES}
+
+${KAP_FILES}: $(KAPDIR)/%.kap :${PNG_DIR}/%.png
+	./png2kap.sh $< $@
+
 .PHONY: kap-png-files
 kap-png-files: $(KAP_PNG_FILES)
 
