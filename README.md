@@ -48,6 +48,13 @@ In `Makefile` a few variables can be configured for this phase:
 make png
 ```
 
+## Make kap list file
+Once `.asc` files are ready, it's time to scan those files and build the list of kap files we will have to generate.
+
+```
+make kap-list
+```
+
 ## ASC file format
 `.asc` are ASCII files containning a few metadata and the array of elevation.
 

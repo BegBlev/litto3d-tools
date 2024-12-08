@@ -40,3 +40,5 @@ ${PNG_FILES}: ${PNG_DIR}/%.png: ${PNG_DIR} ${ASC_DIR}/%.asc
 ${PNG_DIR}:
 	@echo creating ${PNG_DIR}
 	mkdir ${PNG_DIR}
+
+include Makefile.kap
