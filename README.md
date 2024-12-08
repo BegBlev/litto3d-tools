@@ -55,6 +55,17 @@ Once `.asc` files are ready, it's time to scan those files and build the list of
 make kap-list
 ```
 
+## Process PNG files
+Before making `.kap` files we have to prepare related `.png` files.
+We have to:
+* assemble `.png` files.
+* rotate `.png` file.
+* crop `.png` file.
+
+```
+make kap-png-files
+```
+
 ## ASC file format
 `.asc` are ASCII files containning a few metadata and the array of elevation.
 
