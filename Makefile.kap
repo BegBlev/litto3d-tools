@@ -1,9 +1,17 @@
 KAPDIR := /var/tmp/litto3d/kap
 
 KAP_LIST_FILE = /var/tmp/litto3d/kap-list.txt
+KAP_FILES = $(patsubst %.kap, ${KAPDIR}/%.kap, $(shell cat $(KAP_LIST_FILE)))
+KAP_PNG_FILES = $(patsubst ${KAPDIR}/%.kap, ${PNG_DIR}/%.png, $(KAP_FILES))
 
 .PHONY: kap-list
 kap-list: $(KAP_LIST_FILE)
 
 $(KAP_LIST_FILE):
 	./litto3d-kap-list.sh > $@
+
+.PHONY: kap-png-files
+kap-png-files: $(KAP_PNG_FILES)
+
+${PNG_DIR}/%.png:
+	./litto3d-png-make.sh $@
