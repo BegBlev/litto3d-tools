@@ -52,7 +52,7 @@ class ASCData:
 
             words = line.split()
 
-            assert words[0] == "nodata_value"
+            assert words[0].lower() == "nodata_value"
             nodata_value = float(words[1])
 
             elevation = np.loadtxt(ascfile)
