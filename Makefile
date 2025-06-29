@@ -20,8 +20,14 @@ unzip: ${AREAS_PATH} ${AREAS_DIRS}
 ${AREAS_PATH}:
 	mkdir -p ${AREAS_PATH}
 
+# The extraction of ASC files from 7z files involves 3 steps.
+# 1 - 7z is decompressed to an "area" directory.
+# 2 - asc files are located and moved to "asc" directory.
+# 3 - temporary "are" directory is deleted after extraction.
 ${AREAS_DIRS}: ${AREAS_PATH}/%: ${ZIP_PATH}/%.7z
 	7z x -o$@ $?
+	find $@ -type f -name '*_MNT1M_*.asc' -exec mv {} ${ASC_DIR} \;
+	rm -rf $@
 
 .PHONY: move-asc
 move-asc: ${ASC_DIR}
